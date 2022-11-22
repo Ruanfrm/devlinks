@@ -1,6 +1,6 @@
 import './home.css'
 import Social from '../../components/social'
-import {FaInstagram, FaGithub, FaTwitter, FaLinkedin} from 'react-icons/fa'
+import {FaInstagram, FaGithub, FaTwitter, FaLinkedin, FaWhatsapp} from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 import {
   getDocs,
@@ -64,7 +64,8 @@ export default function Home() {
             github: snapshot.data().github,
             instagram: snapshot.data().instagram,
             linkedin: snapshot.data().linkedin,
-            twitter: snapshot.data().twitter
+            twitter: snapshot.data().twitter,
+            whatsapp: snapshot.data().whatsapp
           })
         }
       })
@@ -116,6 +117,9 @@ export default function Home() {
           </Social>
           <Social url={socialLinks?.linkedin}>
             <FaLinkedin  size={25} color="#fff"/>
+          </Social>
+          <Social url={socialLinks?.whatsapp}>
+            <FaWhatsapp size={25} color="#fff" />
           </Social>
         </footer>  
         )}

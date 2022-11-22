@@ -18,6 +18,7 @@ export default function Networks() {
     const [instagram, setInstagram ] = useState();
     const [linkedin, setLinkedin] = useState();
     const [twitter, setTwitter] = useState();
+    const [whats, setWhats] = useState();
 
     
 
@@ -29,6 +30,7 @@ export default function Networks() {
         instagram: instagram,
         linkedin: linkedin,
         twitter: twitter,
+        whatsapp: whats
       })
       .then(() => {
         toast.success('Salvo com sucesso.')
@@ -50,6 +52,7 @@ export default function Networks() {
             setInstagram(snapshot.data().instagram)
             setLinkedin(snapshot.data().linkedin)
             setTwitter(snapshot.data().twitter)
+            setWhats(snapshot.data().whats)
             toast.success('Links carregados com sucesso.')
 
           }
@@ -98,6 +101,13 @@ export default function Networks() {
            value={twitter}
            type="url"
             onChange={(e) => setTwitter(e.target.value)}
+          />
+          <label>Link do Whatsapp</label>
+            <Input
+           placeholder="digite a url"
+           value={whats}
+           type="url"
+            onChange={(e) => setWhats(e.target.value)}
           />
             <button type="submit" className="btn-register">salvar links <MdAddLink size={24} color="#fff"/> </button>
         </form>
