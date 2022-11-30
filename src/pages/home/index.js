@@ -65,15 +65,16 @@ export default function Home() {
             instagram: snapshot.data().instagram,
             linkedin: snapshot.data().linkedin,
             twitter: snapshot.data().twitter,
-            whatsapp: snapshot.data().whatsapp
+            whatsapp: snapshot.data().whatsapp,
+            nome: snapshot.data().nome,
+            foto: snapshot.data().foto,
+            bio: snapshot.data().bio
           })
         }
       })
     }
     loadSocialLinks();
   }, [])
-
-  
 
 
   return (
@@ -82,7 +83,7 @@ export default function Home() {
 <header>
       <div>
         <img
-          src="https://github.com/Ruanfrm.png"
+          src={socialLinks?.foto}
           alt="Ruan Freire foto"
           className='header-img'
         />
@@ -90,8 +91,8 @@ export default function Home() {
     </header>
 
 
-        <h1>Ruan Freire</h1>
-        <span>Veja meus links 👇</span>
+        <h1>{socialLinks?.nome}</h1>
+        <span>{socialLinks?.bio}</span>
 
         <main className='links'>
         

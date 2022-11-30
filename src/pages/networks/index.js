@@ -18,7 +18,10 @@ export default function Networks() {
     const [instagram, setInstagram ] = useState();
     const [linkedin, setLinkedin] = useState();
     const [twitter, setTwitter] = useState();
-    const [whats, setWhats] = useState();
+    const [whatsapp, setWhats] = useState();
+    const [name, setName] = useState();
+    const [photo, setPhoto] = useState();
+    const [bio, setBio] = useState();
 
     
 
@@ -30,7 +33,11 @@ export default function Networks() {
         instagram: instagram,
         linkedin: linkedin,
         twitter: twitter,
-        whatsapp: whats
+        whatsapp: whatsapp,
+        nome: name,
+        foto: photo,
+        bio: bio
+        
       })
       .then(() => {
         toast.success('Salvo com sucesso.')
@@ -52,7 +59,10 @@ export default function Networks() {
             setInstagram(snapshot.data().instagram)
             setLinkedin(snapshot.data().linkedin)
             setTwitter(snapshot.data().twitter)
-            setWhats(snapshot.data().whats)
+            setWhats(snapshot.data().whatsapp)
+            setName(snapshot.data().nome)
+            setPhoto(snapshot.data().foto)
+            setBio(snapshot.data().bio)
             toast.success('Links carregados com sucesso.')
 
           }
@@ -102,12 +112,34 @@ export default function Networks() {
            type="url"
             onChange={(e) => setTwitter(e.target.value)}
           />
+          
           <label>Link do Whatsapp</label>
             <Input
            placeholder="digite a url"
-           value={whats}
+           value={whatsapp}
            type="url"
             onChange={(e) => setWhats(e.target.value)}
+          />
+            <label>Link da foto</label>
+            <Input
+           placeholder="digite a url"
+           value={photo}
+           type="url"
+            onChange={(e) => setPhoto(e.target.value)}
+          />
+            <label>Seu nome</label>
+            <Input
+           placeholder="digite seu nome"
+           value={name}
+           type="text"
+            onChange={(e) => setName(e.target.value)}
+          />
+            <label>Bio > legenda abaixo do nome</label>
+            <Input
+           placeholder="digite uma legenda "
+           value={bio}
+           type="text"
+            onChange={(e) => setBio(e.target.value)}
           />
             <button type="submit" className="btn-register">salvar links <MdAddLink size={24} color="#fff"/> </button>
         </form>
