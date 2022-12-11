@@ -12,7 +12,7 @@
     margin-bottom: 14px;
     color: white;
     font-size: 44px;
-    padding-top: 94px;
+    padding-top: 25px;
     color: #fff;
 }
 
@@ -80,6 +80,7 @@ footer {
 .header-img {
     border-radius: 50%;
     width: 60%;
+    margin-top: 1rem;
 }
 
 
