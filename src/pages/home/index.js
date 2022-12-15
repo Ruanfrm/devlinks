@@ -11,6 +11,7 @@ import {
   doc
 } from 'firebase/firestore'
 import {db} from '../../services/conectionfirebase'
+import CookieBanner from '../../components/modal-cookies'
 
 
 export default function Home() {
@@ -103,7 +104,9 @@ export default function Home() {
           </a>
         </section>
         ))}
-      
+      <div className='modal-close'>
+      <CookieBanner />
+      </div>
 
         {links.length !== 0 && Object.keys(socialLinks).length > 0 && (
           <footer>

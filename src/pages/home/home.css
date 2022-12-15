@@ -27,6 +27,9 @@
     width: 90%;
     text-align: center;
     flex-direction: column;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -38,6 +41,12 @@
     user-select: none;
     border-radius: 4px;
     transition: transform 0.4s;
+    text-decoration: none;
+}
+
+.link-area a {
+    text-decoration: none;
+    
 }
 
 .link-area:hover {
@@ -48,6 +57,9 @@
     font-size: 18px;
     line-height: 150%;
     color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    
     
 }
 footer {

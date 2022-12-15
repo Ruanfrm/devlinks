@@ -1,0 +1,49 @@
+.container-modal {
+    background-color: blue;
+    padding: 1rem;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 2px;
+    right: 10px;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    width: 300px;
+    opacity: 0.9;
+    animation: animation-cookies 3s linear;
+}
+
+.container-modal p {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;    
+    text-align: justify;
+}
+
+.container-modal button {
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: #000;
+}
+.container-modal button:hover {
+    background-color: cyan;
+    
+}
+@media (max-width: 600px){
+    .container-modal {
+        width: 250px;
+        position: fixed;
+        left: 5rem;
+        right: 5rem;
+        bottom: 2px;
+    }
+}
+
+@keyframes animation-cookies {
+    from {
+        transform: translateY(110%);
+    }
+    to {
+        transform: translateY(-10%);
+    }
+}

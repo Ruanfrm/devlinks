@@ -1,4 +1,6 @@
 import { createBrowserRouter } from "react-router-dom"
+import  'bootstrap/dist/css/bootstrap.min.css' ;
+
 
 import Home from './pages/home'
 import Login from "./pages/login"
